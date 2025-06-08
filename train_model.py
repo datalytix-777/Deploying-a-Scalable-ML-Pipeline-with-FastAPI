@@ -33,14 +33,10 @@ cat_features = [
     "native-country",
 ]
 
-#defining the label column
-label="salary"
+# defining the label column
+label = "salary"
 
 X_train, y_train, encoder, lb = process_data(
-    # your code here
-    # use the train dataset 
-    # use training=True
-    # do not need to pass encoder and lb as input
     train,
     categorical_features=cat_features,
     label=label,
@@ -70,7 +66,7 @@ save_model(encoder, encoder_path)
 # load the model
 model = load_model(
     model_path
-) 
+)
 
 preds = inference(
     model,
