@@ -1,5 +1,4 @@
 import json
-
 import requests
 
 r = requests.get('http://127.0.0.1:8000')
@@ -26,7 +25,7 @@ data = {
     "native-country": "United-States",
 }
 
-r = requests.post('http://127.0.0.1:8000')
+r = requests.post('http://127.0.0.1:8000/data/', data=json.dumps(data))
 
 print(r.status_code)
 print(r.json())
